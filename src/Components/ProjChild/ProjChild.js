@@ -1,7 +1,6 @@
 import "./ProjChild.css";
 
 import { Parallax, ParallaxBanner } from "react-scroll-parallax";
-import { Link } from "react-router-dom";
 
 
 const ProjChild = (props) => {
@@ -45,9 +44,9 @@ const ProjChild = (props) => {
         </Parallax>
       </div>
       <div className="button_space">
-        <Link className="music_app_button" to={props.data.firstLink} onClick={() => localStorage.setItem("buttonBorder", "externalClicked")}>
+        <a className="music_app_button" href={props.data.firstLink} onClick={() => localStorage.setItem("buttonBorder", "externalClicked")}>
           Discover Project
-        </Link>
+        </a>
       </div>
 
     </section>
