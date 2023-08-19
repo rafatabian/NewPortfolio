@@ -1,0 +1,249 @@
+.first_section{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 2rem 4rem;
+    position:relative;
+}
+.first_section_paralax{
+    margin-top: 40vh;  
+}
+.music_icon{
+    width: 100px;
+    height: 100px;
+    color: var(--white);
+}
+.second_section_paralax{
+  margin-top: 400px;
+}
+.second_section_paralax h1{
+  font-family: var(--roboto);
+  color: var(--white);
+  font-size: 50px;
+  letter-spacing: -2px;
+  text-align: center;
+}
+
+.music_banner{
+    width: 100%;
+    height: 100vh;
+    margin-top: 200px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.music_app_info{
+    width: 100%;
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.aristocrate_h1{
+    width: 100%;
+    text-align: center;
+    font-family: var(--roboto);
+    color: var(--white);
+    font-size: 30px;
+}
+.music_first_info_p, .music_second_info_p,
+ .music_third_info_p, .music_forth_info_p{
+    width: 600px;
+    height:90px;
+    padding: 10px 20px;
+    background-color: rgb(42, 42, 42);
+    margin: 10px 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.music_first_info_p p, .music_second_info_p p,
+.music_third_info_p p, .music_forth_info_p p{
+   width: 100%;
+ }
+.music_first_info_p svg,
+.music_second_info_p svg,
+.music_third_info_p svg,
+.music_forth_info_p svg{
+    margin-right: 20px;
+    width: 35px;
+    height: 35px;
+}
+.music_first_info_p svg{
+    color:#E74C3C;
+}
+.music_second_info_p svg{
+    color:#3498DB;
+}
+.music_third_info_p svg{
+    color: #8E44AD;
+}
+.music_forth_info_p svg{
+    color: rgb(255, 255, 0);
+}
+.last_world_icon, .middle_brain_icon{
+    color: #3498DB !important;
+}
+.last_image_icon{
+    color: #F39C12 !important;
+}
+.last_tablet_icon{
+    color: #2ECC71  !important;
+}
+.middle_tablet_icon{
+    color: #8E44AD !important;
+}
+.middle_lightning_icon{
+    color: yellow !important;
+}
+.middle_history_icon{
+    color: #27AE60 !important;
+}
+.music_first_info_p p, .music_second_info_p p,
+.music_third_info_p p, .music_forth_info_p p{
+    font-family: var(--roboto);
+    color: rgb(220, 220, 220);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+.music_first_info_p b, .music_second_info_p b,
+.music_third_info_p b, .music_forth_info_p b{
+  color: aliceblue;
+}
+
+.button_space{
+    width: 100%;
+    margin: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.music_app_button{
+    position: relative;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: var(--roboto);
+    background: transparent;
+    color: var(--white);
+    border: 1.5px solid rgb(152, 152, 152);
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1;
+    transition: 0.3s ease-out;
+    background-color: black;
+}
+.music_app_button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    transition: transform 0.3s;
+    transform: scaleX(0);
+    transform-origin: left;
+    background-color: var(--white);
+    border-radius:6px;
+}
+.music_app_button:hover::before{
+    transform: scaleX(1);  
+    background-color: white;
+}
+.music_app_button:hover{
+    color: black;
+    border: 1.5px solid var(--white);
+}
+
+@media screen and (min-width:1600px){
+    .second_section_paralax h1{
+        font-size: 55px !important;
+    }
+    .music_banner{
+       width: calc(100vw - 20rem) !important;
+    }
+    .aristocrate_h1{
+        font-size: 40px;
+    }
+    .music_first_info_p,
+    .music_second_info_p,
+    .music_third_info_p,
+    .music_forth_info_p{
+        height: unset;
+        width: 650px;
+    }
+    .music_first_info_p svg,
+    .music_second_info_p svg,
+    .music_third_info_p svg,
+    .music_forth_info_p svg {
+       transform: scale(1.3);
+    } 
+    .music_first_info_p p, 
+    .music_second_info_p p,
+    .music_third_info_p p,
+    .music_forth_info_p p {
+      font-size: 20px;
+    }
+    .music_app_button{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:740px){
+    .first_section{
+        padding: 0 1rem !important;
+    }
+    .music_first_info_p,
+    .music_second_info_p,
+    .music_third_info_p,
+    .music_forth_info_p {
+        width: 85% !important;
+        height: 100% !important;
+    }
+}
+@media screen and (max-width:500px){
+    .music_icon{
+         width: 50px;
+         height: 50px;
+    }
+    .second_section_paralax h1{
+        font-size: 30px;
+        letter-spacing: -1px;
+    }
+}
+@media screen and (max-width:450px){
+    .music_app_parallax{
+      width: 300px;
+      height: 130px;
+    }
+    .music_app_parallax img{
+     object-fit: cover;
+     width: 100%;
+     height: 100%;
+    }
+    .aristocrate_h1{
+        margin:20px 0 20px 0;
+    }
+    .music_first_info_p,
+    .music_second_info_p,
+    .music_third_info_p,
+    .music_forth_info_p{
+        width: 100% !important;
+    }
+    .music_first_info_p p,
+    .music_second_info_p p,
+    .music_third_info_p p,
+    .music_forth_info_p p{
+        text-align: center;
+    }
+}

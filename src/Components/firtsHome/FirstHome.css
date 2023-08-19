@@ -1,0 +1,53 @@
+.paralaxBackground{
+    height: 100vh;
+    margin-top: 100vh;
+}
+.home_name_container {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.home_name_container h1{
+    text-align: center;
+    font-family: var(--roboto);
+    color:var(--white);
+    width: 80%;
+}
+.Home_h1_container{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+.name_white_bar {
+    width:230px;
+    height: 2px;
+    background-color: var(--white);
+    border-radius: 1px;
+    animation-delay: 1s;
+  }
+  @media screen and (min-width: 1920px){
+    .home_name_container h1{
+        font-size: 45px;
+    }
+  }
+@media screen and (max-width: 880px){
+    .home_name_container{
+        width: 100%;
+        align-items: end;
+        justify-content: center;
+    }
+    .home_name_container h1{
+        max-width: 50%;
+    }
+  }
+@media screen and (max-width: 500px){
+    .home_name_container h1{
+        max-width: 80%;
+        font-size: 25px;
+    }
+}
