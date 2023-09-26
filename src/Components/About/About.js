@@ -61,13 +61,12 @@ const About = () => {
       useEffect(() => {
         if(next === "first"){
         handleFirstSet()  
-        }                       
+        }                        
       }, [next])
 
           const handleClick = (value) => {
            if(value === "second"){
             setNext("second")
-            const secondCon = document.querySelector(".firstCont")
 
             handleSecondSet()
           }else if(value === "third"){
@@ -81,6 +80,8 @@ const About = () => {
             handleFifthSet()
           }
         }
+       
+      
 
 //handle first set of words
       const handleFirstSet = () => {
@@ -145,7 +146,6 @@ const About = () => {
      
   return (
     <div className="about_container">
-
         <div className={`words_first_container firstCont ${next === "first" ? "" : "container_hyde"}`}>
           <GiVineFlower className=" flower"/> 
             {firstSet.map((obj, index) => <p className="words_first_set" key={obj.value + index}>{obj.value}&nbsp;</p>)}
@@ -181,9 +181,8 @@ const About = () => {
         {fifthSet.map((obj, index) => <p className="words_first_set" key={obj.value + index}>{obj.value}&nbsp;</p>)}
         <Link to="/projects" className="next_button next_forth_btn projects_button" onClick={()=> handleProjectsClick()}>Projects</Link>
        <span className="span_info fifthSpanInfo">5/5</span>
-        </div>
-
-      </div>
+        </div> 
+    </div>
   )
 }
 

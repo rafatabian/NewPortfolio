@@ -1,5 +1,5 @@
 import "./ProjectsR.css"
-import { useContext} from "react"
+import { useContext, useEffect} from "react"
 import { generalContext } from "../../Contexts/GeneralC"
 import ProjChild from "../../Components/ProjChild/ProjChild"
 import { Link } from "react-router-dom"
@@ -78,6 +78,16 @@ const ProjectsR = () => {
   forthText: " Easily refer back to past conversations for continuous assistance.",
   firstLink: "https://asistent-45fb86b712b9.herokuapp.com/"
 }]
+
+//logic for optimisation
+useEffect(() => {
+  const slideInCont = document.querySelector(".projects_slide_in")
+  if(slideInCont){
+    setTimeout(() => {
+     slideInCont.style.display = "block"
+    }, 1000)
+  }
+}, [])
 
   return (
     <>

@@ -154,6 +154,8 @@
 .button_show_more {
     top: 290px;
     animation: toggledContainer 0.3s;
+    color: gold ;
+    border: 1.5px solid gold;
 }
 
 .button_show_less {

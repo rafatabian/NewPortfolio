@@ -20,8 +20,9 @@ const SecondHome = () => {
       speed={10}
     >
       <div className="numbers_container">
-        <Parallax opacity={[0.1, 2]} translateY={[0, 300]}>
-          <p>Now Let's Discover More!</p>
+        <Parallax translateY={[-100, 100]}>
+          <p>My mission is to create exceptional websites and apps.</p>
+          <p>Let's discover more!</p>
         </Parallax>
       </div>
     </ParallaxBanner>

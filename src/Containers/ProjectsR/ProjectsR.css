@@ -4,6 +4,7 @@
     width: 100vw;
     background-color: black;
     overflow: hidden;
+    display: none;
 }
 @keyframes projSlideIn {
     0% {

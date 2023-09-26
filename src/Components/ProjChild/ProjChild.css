@@ -14,7 +14,7 @@
 .music_icon{
     width: 100px;
     height: 100px;
-    color: var(--white);
+    color:rgb(0, 179, 255);
 }
 .second_section_paralax{
   margin-top: 400px;
@@ -135,13 +135,13 @@
     font-size: 18px;
     font-family: var(--roboto);
     background: transparent;
-    color: var(--white);
-    border: 1.5px solid rgb(152, 152, 152);
+    color: gold;
+    border: 1.5px solid gold;
     border-radius: 8px;
     cursor: pointer;
     z-index: 1;
     transition: 0.3s ease-out;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
 }
 .music_app_button::before{
     content: '';

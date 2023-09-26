@@ -16,7 +16,6 @@ const FirstHome = () => {
     >
       <div className="Home_h1_container">
         <Parallax
-          opacity={[1.5, 0]}
           translateY={[-30, 30]}
           className="home_name_container"
         >

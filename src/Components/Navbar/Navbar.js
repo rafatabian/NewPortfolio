@@ -57,6 +57,7 @@ const Navbar = () => {
     }
   }, [buttons]);
 
+
   return (
     <div //navbar to the left
       className={`navbar_container ${

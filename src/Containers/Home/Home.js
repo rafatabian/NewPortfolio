@@ -133,6 +133,8 @@ const Home = () => {
   return (
     <div className="home_container">
 {/* welcome section */}
+<div className="home_background">
+  <div className="home_background_shadow">
       <Parallax speed={-10} scale={[1.5, 1]} opacity={[3, 0]}>
         <div className="welcome_container">
           <h1 className="welcome w">W</h1>
@@ -148,6 +150,8 @@ const Home = () => {
           <MdKeyboardArrowDown className="home_arrow_down" />
         </div>
       </Parallax>
+  </div>
+  </div>
 {/* moon transition section */}
       <FirstHome />
 

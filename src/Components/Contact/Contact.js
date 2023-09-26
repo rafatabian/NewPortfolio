@@ -16,6 +16,7 @@ const handleButton = () => {
 
   return (
     <div className="contact_background">
+      <div className="contact_background_blur">
        <div className="contact_pannel">
        
            <p>Thanks for visiting my portfolio! I'm excited to share my projects and work with you. If you have any questions or collaboration ideas, just click the button below, and I'll be happy to connect with you. Looking  forward to hearing from you!</p>
@@ -25,6 +26,7 @@ const handleButton = () => {
        <p className="p_email" style={{animation: `${toggleEmail ? "email_animation 0.5s ease forwards" : ""}`}}>fabianrwork@gmail.com</p>
       
       <span className="contact_animation_line"></span>
+      </div>
     </div>
   )
 }
