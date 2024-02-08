@@ -7,7 +7,8 @@ import { GiVineFlower, GiVanillaFlower, GiLotusFlower, GiFlowerTwirl, GiDandelio
 
 
 const About = () => {
-  const { setButtons, setPages } = useContext(generalContext)
+  const { setPages } = useContext(generalContext)
+  
   const [firstSet, setFirstSet] = useState([])
   const [secondSet, setSecondSet] = useState([])
   const [thirdSet, setThirdSet] = useState([])
@@ -141,7 +142,7 @@ const About = () => {
       //handle "Projects" button
       const handleProjectsClick = () => {
        setPages("projects")
-       setButtons("projects")
+      //  setButtons("projects")
       }
      
   return (

@@ -5,7 +5,7 @@ export const ManageGeneral = ({ children }) => {
     const [visible, setVisible] = useState(null)
     const [light, setLight] = useState(false)
     const [pages, setPages] = useState("home")
-    const [buttons, setButtons] = useState("home")
+   //  const [buttons, setButtons] = useState("home")
     const [projRotation, setProjRotation] = useState(false) 
     const [slideIn, setSlideIn] = useState(false)   
     //special state for navbar behavior
@@ -21,25 +21,18 @@ export const ManageGeneral = ({ children }) => {
         setPages(value)
         setVisible(false)
         setNavShrink(null)
-        //save button border if the page refresh
-        localStorage.setItem("buttonBorder", value)
 
          if(value === "home"){
-           setButtons("home")
            setSpecial(false)
            setProjRotation(false)
          }else if(value === "about"){
-           setButtons("about")
            setProjRotation(false)
         }else if(value === "projects"){
-           setButtons("projects")
            setSpecial(true)
         }else{
            setProjRotation(false)
-           setButtons("contact")
         } 
         if(value === "aboutButton"){
-         setButtons("about")
          
          const navbar = document.querySelector(".navbar_container")
          if( navbar && navbar.className == "navbar_container navShrink"){
@@ -47,14 +40,6 @@ export const ManageGeneral = ({ children }) => {
          }
         }
    } 
-
-   //retrive the button value if the page refresh
-   useEffect(() => {
-       const border = localStorage.getItem("buttonBorder")
-       if(border){
-         setButtons(border)
-       }
-   }, [])
 
 
    //scroll up when reaching projects to not rotate
@@ -81,8 +66,6 @@ export const ManageGeneral = ({ children }) => {
             light,
             pages,
             setPages, 
-            buttons,
-            setButtons, 
             projRotation,
             setProjRotation,
             slideIn, 

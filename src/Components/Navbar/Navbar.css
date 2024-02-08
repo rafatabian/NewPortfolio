@@ -9,7 +9,8 @@
 }
 
 .navbar_container {
-    width: 100vw;
+    /* width: 100vw; */
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     height: 60px;
     display: flex;
@@ -18,7 +19,7 @@
     padding: 0 6rem;
     position: fixed;
     z-index: 99;
-    animation: navbarAppear 0.9s ease-in forwards;
+    animation: navbarAppear 0.3s ease-in forwards;
 }
 
 .navbar_container::before{
@@ -31,17 +32,6 @@
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
 }
  
-@keyframes navInProjPopIn {
-    0% {
-        scale: 0.6;
-        opacity: 0;
-    }
-
-    100% {
-        scale: 1 !important;
-        opacity: 1 !important;
-    }
-}
 
 .navbar_container a {
     position: relative;
@@ -122,34 +112,32 @@
     border: 1.5px solid var(--white);
 }
 
-.navbar_container_on_left {
+.navbar_container_on_left{
     position: fixed;
     left: calc(-50vh + 30px);
     top: calc(-30px + 50vh);
     width: 100vh;
     height: 60px;
     transform: rotate(-90deg);
-
 }
 
-@keyframes navbarRotation {
-    0% {
-        transform: rotate(-90deg);
+@keyframes navGoLeft {
+    0%{
+        transform: translateX(0) rotate(-90deg);
     }
-
-    50% {
-        left: 0;
-        top: 0;
-        scale: 0.4;
+    100%{
+        transform: translateX(-75px) rotate(-90deg);
     }
-
-    100% {
-        transform: rotate(0deg);
-        width: 100vw;
-        height: 60px;
-        left: 0;
-        top: 0;
-        scale: 1;
+}
+@keyframes navSlideFromTop {
+    0%{
+       transform: translateY(-75px);
+    }
+    60%{
+      transform: translateY(10px);
+    }
+    100%{
+     transform: translateY(0);
     }
 }
 

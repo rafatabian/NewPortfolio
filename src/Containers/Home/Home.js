@@ -3,12 +3,13 @@ import { Parallax } from "react-scroll-parallax";
 import FirstHome from "../../Components/firtsHome/FirstHome";
 import SecondHome from "../../Components/secontHome/SecondHome";
 import SkillsHome from "../../Components/skillsHome/SkillsHome";
-import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
+import {  MdKeyboardArrowUp } from "react-icons/md";
 import { useEffect, useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { generalContext } from "../../Contexts/GeneralC";
 import explosion from "../../assets/explosion.png";
 import { HiOutlineCursorClick } from "react-icons/hi";
+import { BsArrowDownShort } from "react-icons/bs"
 
 const Home = () => {
   //state to toggle letter moving for mobile devices
@@ -147,7 +148,7 @@ const Home = () => {
         </div>
 
         <div className="home_arrow_down_container">
-          <MdKeyboardArrowDown className="home_arrow_down" />
+          <BsArrowDownShort className="home_arrow_down"/>
         </div>
       </Parallax>
   </div>

@@ -1,10 +1,9 @@
 import "./Projects.css";
 import Folder from "../../Components/Folder/Folder";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { generalContext } from "../../Contexts/GeneralC";
-import React from "react";  
 import ProjectsR from "../../Containers/ProjectsR/ProjectsR";
-import { MdKeyboardArrowDown } from "react-icons/md";
+import { BsArrowDownShort } from "react-icons/bs";
 //images
 import music_app from "../../assets/music_app.png";
 import music_app_tiny from "../../assets/music_app_tiny.png";
@@ -12,54 +11,61 @@ import ai_app from "../../assets/ai_app.png";
 import ai_app_tiny from "../../assets/ai_app_tiny.png";
 import cars_app from "../../assets/cars_app.png";
 import cars_app_tiny from "../../assets/cars_app_tiny.png";
+import { useLocation } from "react-router-dom";
 
 
 const Projects = () => {
-  const { projRotation, allowScroll, setAllowScroll, buttons } =
-    useContext(generalContext);
+  const { projRotation, allowScroll, setAllowScroll } = useContext(generalContext);
+  const location = useLocation()
+
+// TO DO 
+// finish proj section by adding "store"
+// improve about section
 
   //logic for scrolling down and activate transitions
-  if (allowScroll) {
-    const navbar = document.querySelector(".navbar_container");
-    const containerProj = document.querySelector(".projects_container");
-    const slideContainer = document.querySelector(".projects_slide_in");
+  if (allowScroll){
+    const containerProj = document.querySelector(".projects_container")
+    const slideContainer = document.querySelector(".projects_slide_in")
 
-    if (navbar) {
-      navbar.style.animation = "navbarRotation 2s ease forwards";
-    }
-    if (containerProj) {
-      containerProj.style.animation = "identifier 2s ease forwards";
+    if (containerProj){
+      containerProj.style.animation = "identifier 1s ease forwards"
+      setTimeout(() => {
+        containerProj.style.display = "none"
+      }, 1500)
     }
     if (slideContainer) {
       setTimeout(() => {
-        slideContainer.style.animation = "projSlideIn 2s ease forwards";
-        slideContainer.scrollIntoView({ behavior: "auto", block: "start" });
-      }, 2000);
+        slideContainer.style.animation = "projSlideIn 1.5s ease forwards"
+        slideContainer.scrollIntoView({ behavior: "auto", block: "start" })
+      }, 300)
     }
   }
 
-  // allow the transitions when scrolling down
+  // allow the transitions when clicking the proj
   const brainScroll = () => {
-    if (buttons === "projects" || buttons === "externalClicked") {
       setAllowScroll(true);
-    }
+
+      setTimeout(() => {
+        setAllowScroll(false)
+      }, 500)
   };
 
   // handle scrolling down in PROJECTS root
-  useEffect(() => {
-    window.addEventListener("scroll", brainScroll);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", brainScroll);
 
-    return () => {
-      window.removeEventListener("scroll", brainScroll);
-      setAllowScroll(false);
-    };
-  }, []);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", brainScroll);
+  //     setAllowScroll(false);
+  //   };
+  // }, []);
 
   
   return (
     <div className="projects_main_container">
       <div className="projects_stars_background"></div>
-      <div className="projects_container">
+      <div className="projects_container" onClick={() => brainScroll()}>
         <div className="title_container">
           <p className="projects_first_word moving_words">
             <span>P</span>ROJECTS
@@ -227,12 +233,12 @@ const Projects = () => {
           </div>
           <Folder img={music_app} tiny={music_app_tiny} title="Music App" />
           <Folder img={cars_app} tiny={cars_app_tiny} title="Selling Platform"/>
-          <Folder img={ai_app} tiny={ai_app_tiny} title="AI Asistant" />
+          <Folder img={ai_app} tiny={ai_app_tiny} title="AI Assistant" />
         </div>
 
-        <div className="proj_arrow_down">
-          <MdKeyboardArrowDown />
-        </div>
+        {/* <div className="proj_arrow_down">
+          <BsArrowDownShort />
+        </div> */}
       </div>
 
        <ProjectsR />

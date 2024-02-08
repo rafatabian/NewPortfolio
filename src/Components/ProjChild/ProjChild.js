@@ -44,7 +44,7 @@ const ProjChild = (props) => {
         </Parallax>
       </div>
       <div className="button_space">
-        <a className="music_app_button" href={props.data.firstLink} onClick={() => localStorage.setItem("buttonBorder", "externalClicked")}>
+        <a className="music_app_button" href={props.data.firstLink}>
           Discover Project
         </a>
       </div>

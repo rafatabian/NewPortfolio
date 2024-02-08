@@ -1,15 +1,17 @@
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { generalContext } from "../../Contexts/GeneralC";
 
 const Navbar = () => {
-  const { navShrink, handleButtonClick, pages, setPages, buttons, setButtons } =
-    useContext(generalContext);
+  const { allowScroll, navShrink, handleButtonClick, pages } = useContext(generalContext);
+
+  const location = useLocation()
+  
 
   useEffect(() => {
     const navbar = document.querySelector(".navbar_container");
-    if (pages !== "projects") {
+    if (location.pathname !== "/projects") {
       if (navbar) {
         navbar.style.animation = "";
         navbar.classList.remove("navbar_container_on_left");
@@ -17,16 +19,21 @@ const Navbar = () => {
     }
   }, [pages]);
 
-  //go to external projects and come back navbar on left
-  useEffect(() => {
-    const pageWas = localStorage.getItem("buttonBorder");
-    const navbar = document.querySelector(".navbar_container");
-    if (pageWas === "externalClicked" && navbar) {
-      setButtons("projects");
-      navbar.classList.add("navbar_container_on_left");
-      setPages("projects");
+//navbar transitions
+useEffect(() => {
+    if(allowScroll){
+      const navbar = document.querySelector(".navbar_container");
+      if(navbar){
+        navbar.style.animation = "navGoLeft 0.3s forwards"
+        setTimeout(() => {
+         navbar.classList.remove("navbar_container_on_left")
+         navbar.style.animation = "navSlideFromTop 0.3s forwards"
+
+        }, 1800)
+      }
     }
-  }, []);
+}, [allowScroll])
+
 
   //logic for 'shrink/normal' navbar
   useEffect(() => {
@@ -44,50 +51,39 @@ const Navbar = () => {
 //remove shrink when changing pages
   useEffect(() => {
     const navbar = document.querySelector(".navbar_container");
-   if(navbar && buttons !== "home" && navbar.className === "navbar_container navShrink"){
+   if(navbar && location.pathname !== "/home" && navbar.className === "navbar_container navShrink"){
     navbar.classList.remove("navShrink")
    }
-  }, [buttons])
-
-  // add animation if pages === projects
-  useEffect(() => {
-    const navbar = document.querySelector(".navbar_container");
-    if (buttons === "projects" && navbar) {
-      navbar.style.animation = "navInProjPopIn 1s ease forwards";
-    }
-  }, [buttons]);
+  }, [location])
 
 
   return (
     <div //navbar to the left
-      className={`navbar_container ${
-        pages === "projects" ? "navbar_container_on_left" : ""
-      }`}
-    >
+      className={`navbar_container ${location.pathname === "/projects" ? "navbar_container_on_left" : ""}`}>
       <Link
         to="/"
-        className={`${buttons === "home" ? "buttonSectionSelected" : ""}`}
+        className={`${location.pathname === "/" ? "buttonSectionSelected" : ""}`}
         onClick={() => handleButtonClick("home")}
       >
         Home
       </Link>
       <Link
         to="/about"
-        className={`${buttons === "about" ? "buttonSectionSelected" : ""}`}
+        className={`${location.pathname === "/about" ? "buttonSectionSelected" : ""}`}
         onClick={() => handleButtonClick("about")}
       >
         About
       </Link>
       <Link
         to="/projects"
-        className={`${buttons === "projects" ? "buttonSectionSelected" : ""}`}
+        className={`${location.pathname === "/projects" ? "buttonSectionSelected" : ""}`}
         onClick={() => handleButtonClick("projects")}
       >
         Projects
       </Link>
       <Link
         to="/contact"
-        className={`${buttons === "contact" ? "buttonSectionSelected" : ""}`}
+        className={`${location.pathname === "/contact" ? "buttonSectionSelected" : ""}`}
         onClick={() => handleButtonClick("contact")}
       >
         Contact

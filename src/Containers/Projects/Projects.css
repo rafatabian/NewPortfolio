@@ -30,18 +30,10 @@
     transform: rotate(-90deg);
     overflow: hidden;
     transition: 0.3s;
-    animation: projContainerPopIn 1s ease forwards;
+    cursor: pointer;
+    user-select: none;
 }
-@keyframes projContainerPopIn {
-    0%{
-     opacity: 0;
-     scale: 0.5;
-    }
-    100%{
-     opacity: 1;
-     scale: 1;
-    }
-}
+
 
 @keyframes identifier {
     0%{
@@ -49,9 +41,7 @@
         scale: 1;
     }
     100% {
-        opacity: 0;
-        scale: 0;
-        display: none;
+        scale: 0.5;
     }
 }
 
@@ -121,7 +111,7 @@
     flex-direction: column;
 }
 
-.proj_arrow_down{
+/* .proj_arrow_down{
     position: absolute;
     width: 10%;
     height: 100%;
@@ -130,8 +120,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-@keyframes arrow_down_proj {
+} */
+/* @keyframes  {
     0% {
         opacity: 0.5;
     }
@@ -143,14 +133,14 @@
     100%{
         opacity: 0.5;
     }
-}
-.proj_arrow_down svg{
+} */
+/* .proj_arrow_down svg{
  width: 50px;
  height: 50px;
  color: white;
  transform: rotate(90deg);
  animation: arrow_down_proj 2s ease-in-out infinite;
-}
+} */
 
 .lorem_ipsum_text{
     position: absolute;
@@ -159,6 +149,7 @@
     color: rgba(255, 255, 255, 0.3);
     font-family: var(--roboto);
     line-height: 1.5;
+    user-select: none;
 }
 
 @media screen and (min-width: 2200px){
