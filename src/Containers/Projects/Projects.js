@@ -3,15 +3,15 @@ import Folder from "../../Components/Folder/Folder";
 import { useContext } from "react";
 import { generalContext } from "../../Contexts/GeneralC";
 import ProjectsR from "../../Containers/ProjectsR/ProjectsR";
-import { BsArrowDownShort } from "react-icons/bs";
+import { useLocation } from "react-router-dom";
 //images
 import music_app from "../../assets/music_app.png";
 import music_app_tiny from "../../assets/music_app_tiny.png";
-import ai_app from "../../assets/ai_app.png";
-import ai_app_tiny from "../../assets/ai_app_tiny.png";
-import cars_app from "../../assets/cars_app.png";
-import cars_app_tiny from "../../assets/cars_app_tiny.png";
-import { useLocation } from "react-router-dom";
+import ai_app from "../../assets/ai_updated.png";
+import ai_app_tiny from "../../assets/ai_updated_tiny.png";
+import store from "../../assets/store_app.png";
+import store_tiny from "../../assets/store_app_tiny.png";
+
 
 
 const Projects = () => {
@@ -49,17 +49,6 @@ const Projects = () => {
         setAllowScroll(false)
       }, 500)
   };
-
-  // handle scrolling down in PROJECTS root
-  // useEffect(() => {
-  //   window.addEventListener("scroll", brainScroll);
-
-
-  //   return () => {
-  //     window.removeEventListener("scroll", brainScroll);
-  //     setAllowScroll(false);
-  //   };
-  // }, []);
 
   
   return (
@@ -231,14 +220,11 @@ const Projects = () => {
             lorem vitae vulputate. Duis mattis tincidunt eros quis feugiat.
             Integer dignissim euismod consequat.
           </div>
-          <Folder img={music_app} tiny={music_app_tiny} title="Music App" />
-          <Folder img={cars_app} tiny={cars_app_tiny} title="Selling Platform"/>
+          <Folder img={store} tiny={store_tiny} title="Selling Platform"/>
           <Folder img={ai_app} tiny={ai_app_tiny} title="AI Assistant" />
+          <Folder img={music_app} tiny={music_app_tiny} title="Music App" />
         </div>
 
-        {/* <div className="proj_arrow_down">
-          <BsArrowDownShort />
-        </div> */}
       </div>
 
        <ProjectsR />

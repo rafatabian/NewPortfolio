@@ -5,15 +5,18 @@ import ProjChild from "../../Components/ProjChild/ProjChild"
 import { Link } from "react-router-dom"
 //icons
 import { SiApplemusic } from "react-icons/si"
-import { BsPuzzleFill,BsCarFrontFill, BsFillChatSquareTextFill, BsLightningChargeFill, BsFillTabletLandscapeFill } from "react-icons/bs"
+import { BsPuzzleFill, BsFillChatSquareTextFill, BsLightningChargeFill, BsFillTabletLandscapeFill } from "react-icons/bs"
 import { BiSolidUser } from "react-icons/bi"
-import { TbWorldCheck } from "react-icons/tb"
-import { IoMdImage } from "react-icons/io"
+import { IoMdSettings } from "react-icons/io"
 import { FaBrain, FaHistory } from "react-icons/fa"
+import { MdLocalGroceryStore } from "react-icons/md"
+import { FaFlask } from "react-icons/fa6" //ev change elaborate icon and make it smaller
+import { IoFlask } from "react-icons/io5" // put FaFlask insted of this
+
 //images
 import music_app from "../../assets/music_app.png"
-import cars_app from "../../assets/cars_app.png"
-import ai_app from "../../assets/ai_app.png"
+import store from "../../assets/store_app.png"
+import ai_app from "../../assets/ai_updated.png"
 import stars from "../../assets/stars.jpg"
 
 
@@ -41,22 +44,22 @@ const ProjectsR = () => {
     firstLink: "https://rafatabian.github.io/music/"
 },
 {
-  zoomIcon: <BsCarFrontFill className='music_icon' />,
-  name: "Online Cars Marketplace",
+  zoomIcon: <MdLocalGroceryStore className='music_icon' />,
+  name: "Online Marketplace",
   bannerImg: { image: stars, speed: -30 },
-  image: <img src={cars_app} alt="music_app" />,
-  firstIcon: <TbWorldCheck className="last_world_icon"/>,
-  firstBold: "Innovating Conventions",
-  firstText: " This is a live showcase of what's achievable in the world of online car buying and selling.",
-  secondIcon: <IoMdImage className="last_image_icon"/>,
-  secondBold: "Efficient Image Loading:",
-  secondText: "  I improved loading times using lazy loading techniques for images.",
-  thirdIcon: <BsFillTabletLandscapeFill className="last_tablet_icon"/>,
-  thirdBold: "Responsive Design:",
-  thirdText: " Browse cars seamlessly on any screen size with CarsUK responsive design.",
-  forthIcon: <BsLightningChargeFill className="last_lightning_icon"/>,
-  forthBold: "Streamlined Navigation:",
-  forthText: " Find your dream car with easy-to-use page transitions.",
+  image: <img src={store} alt="music_app" />,
+  firstIcon: <IoMdSettings className="last_world_icon"/>,
+  firstBold: "Seamless Experience",
+  firstText: " This cherished project stands as one of my favorites, offering seamless user exploration, interaction, and management capabilities.",
+  secondIcon: <BiSolidUser className="last_image_icon"/>,
+  secondBold: "User-Centric Design",
+  secondText: " With a keen emphasis on user needs, my platform ensures a seamless experience from start to finish, prioritizing UI and UX.",
+  thirdIcon: <BsLightningChargeFill className="last_tablet_icon"/>,
+  thirdBold: "High-Speed Functionality:",
+  thirdText: " Enjoy lightning-fast interactions and smooth transitions throughout your browsing and purchasing experience.",
+  forthIcon: <IoFlask  className="last_lightning_icon"/>,
+  forthBold: "Personalized Discovery:",
+  forthText: "  Explore curated listings and tailored recommendations for a customized shopping journey.",
   firstLink: "https://rafatabian.github.io/shop/"
 },
 {
@@ -100,7 +103,7 @@ useEffect(() => {
           </div>
 
 
-          <ProjChild data={data[0]}/>
+          <ProjChild data={data[1]}/>
 
          <div className= "second_rotated_title_container"> 
             <p className="rotated_first_word second_rotated_moving_words">Up<span>coming</span> Updates</p>   
@@ -116,7 +119,7 @@ useEffect(() => {
             <p className="rotated_third_word third_rotated_moving_words">Path<span>way</span> Opens</p>
           </div>
 
-          <ProjChild data={data[1]}/>
+          <ProjChild data={data[0]}/>
 
           <div className="contact_buttons_container">
             <Link to="/contact" onClick={()=> handleButtonClick("contact")}>contact</Link>

@@ -22,8 +22,8 @@
 .second_section_paralax h1{
   font-family: var(--roboto);
   color: var(--white);
-  font-size: 50px;
-  letter-spacing: -2px;
+  font-size: 46px;
+  letter-spacing: 0px;
   text-align: center;
 }
 
@@ -88,16 +88,14 @@
     color: #8E44AD;
 }
 .music_forth_info_p svg{
-    color: rgb(255, 255, 0);
+    color: #2ECC71;
+    /* width: 28px; */
 }
 .last_world_icon, .middle_brain_icon{
-    color: #3498DB !important;
-}
-.last_image_icon{
-    color: #F39C12 !important;
+    color: #F39C12 !important
 }
 .last_tablet_icon{
-    color: #2ECC71  !important;
+    color: rgb(255, 255, 0) !important
 }
 .middle_tablet_icon{
     color: #8E44AD !important;
