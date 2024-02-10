@@ -1,6 +1,7 @@
 import "./ProjChild.css";
 
 import { Parallax, ParallaxBanner } from "react-scroll-parallax";
+import { Link } from "react-router-dom";
 
 
 const ProjChild = (props) => {
@@ -16,7 +17,10 @@ const ProjChild = (props) => {
 
       <ParallaxBanner className="music_banner" layers={[props.data.bannerImg]}>
         <Parallax className="music_app_parallax">
-        {props.data.image}
+          <Link to={props.data.firstLink}>
+            {props.data.image}
+          </Link>
+        
         </Parallax>
       </ParallaxBanner>
 

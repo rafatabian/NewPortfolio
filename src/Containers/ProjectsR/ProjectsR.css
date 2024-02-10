@@ -33,7 +33,7 @@
     font-family: var(--roboto);
     color: var(--white);
     font-size: 90px;
-    letter-spacing: -5px;
+    letter-spacing: -1px;
     font-weight: 600;
 }
 .rotated_moving_words,
@@ -42,15 +42,15 @@
     min-width: 1000px;
 }
 .rotated_first_word{
-    animation: rotated_first_word 7s linear infinite;
+    animation: rotated_first_word 10s linear infinite;
 } 
 .rotated_second_word{
-    animation: rotated_first_word 7s linear infinite;
-    animation-delay: 2.4s;
+    animation: rotated_first_word 10s linear infinite;
+    animation-delay: 3.25s;
 }
 .rotated_third_word{
-    animation: rotated_first_word 7s linear infinite;
-    animation-delay: 4.7s;
+    animation: rotated_first_word 10s linear infinite;
+    animation-delay: 6.5s;
 }
 @keyframes rotated_first_word {
     0% {
@@ -69,7 +69,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 40px 0 ;
+    margin: -50px 0 70px 0;
 }
 .contact_buttons_container a{
     position: relative;
@@ -110,7 +110,7 @@
 
 .second_rotated_title_container, 
 .third_rotated_title_container{
-    margin-bottom:100px;
+    margin-bottom:0px;
     width: 100vw;
     height: 100px;
     display: flex;
@@ -132,7 +132,7 @@
     font-family: var(--roboto);
     color: var(--white);
     font-size: 90px;
-    letter-spacing: -5px;
+    letter-spacing: -1px;
     font-weight: 600;
 }
 

@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
-    padding: 2rem 4rem;
+    padding: 0 4rem;
     position:relative;
 }
 .first_section_paralax{
@@ -26,7 +26,12 @@
   letter-spacing: 0px;
   text-align: center;
 }
-
+.music_app_parallax{
+   width: 45%;
+}
+.music_app_parallax img{
+    width: 100%;
+}
 .music_banner{
     width: 100%;
     height: 100vh;
@@ -56,15 +61,17 @@
 .music_first_info_p, .music_second_info_p,
  .music_third_info_p, .music_forth_info_p{
     width: 600px;
-    height:90px;
-    padding: 10px 20px;
+    padding: 15px 20px 15px 25px;
     background-color: rgb(42, 42, 42);
-    margin: 10px 0;
+    margin: 8px 0;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
+}
+.music_first_info_p{
+    margin-top: 16px !important;
 }
 .music_first_info_p p, .music_second_info_p p,
 .music_third_info_p p, .music_forth_info_p p{
@@ -74,7 +81,7 @@
 .music_second_info_p svg,
 .music_third_info_p svg,
 .music_forth_info_p svg{
-    margin-right: 20px;
+    margin-right: 13px;
     width: 35px;
     height: 35px;
 }
@@ -109,14 +116,15 @@
 .music_first_info_p p, .music_second_info_p p,
 .music_third_info_p p, .music_forth_info_p p{
     font-family: var(--roboto);
-    color: rgb(220, 220, 220);
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.4;
+    color:white;
+    font-size: 16px;
+    letter-spacing: 0.3px !important;
 }
 .music_first_info_p b, .music_second_info_p b,
 .music_third_info_p b, .music_forth_info_p b{
   color: aliceblue;
+  font-size: 15.5px;
+  letter-spacing: 0.5px;
 }
 
 .button_space{
@@ -140,6 +148,7 @@
     z-index: 1;
     transition: 0.3s ease-out;
     background-color: rgb(0, 0, 0);
+    margin-bottom: 100px;
 }
 .music_app_button::before{
     content: '';

@@ -20,6 +20,7 @@ const Projects = () => {
 
 // TO DO 
 // finish proj section by adding "store"
+// improve proj section overall
 // improve about section
 
   //logic for scrolling down and activate transitions

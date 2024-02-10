@@ -49,10 +49,10 @@ const ProjectsR = () => {
   bannerImg: { image: stars, speed: -30 },
   image: <img src={store} alt="music_app" />,
   firstIcon: <IoMdSettings className="last_world_icon"/>,
-  firstBold: "Seamless Experience",
+  firstBold: "Seamless Experience:",
   firstText: " This cherished project stands as one of my favorites, offering seamless user exploration, interaction, and management capabilities.",
   secondIcon: <BiSolidUser className="last_image_icon"/>,
-  secondBold: "User-Centric Design",
+  secondBold: "User-Centric Design:",
   secondText: " With a keen emphasis on user needs, my platform ensures a seamless experience from start to finish, prioritizing UI and UX.",
   thirdIcon: <BsLightningChargeFill className="last_tablet_icon"/>,
   thirdBold: "High-Speed Functionality:",
@@ -60,7 +60,7 @@ const ProjectsR = () => {
   forthIcon: <IoFlask  className="last_lightning_icon"/>,
   forthBold: "Personalized Discovery:",
   forthText: "  Explore curated listings and tailored recommendations for a customized shopping journey.",
-  firstLink: "https://rafatabian.github.io/shop/"
+  firstLink: "https://rafatabian.github.io/store"
 },
 {
   zoomIcon: <BsFillChatSquareTextFill className='music_icon' />,
@@ -79,7 +79,7 @@ const ProjectsR = () => {
   forthIcon: <FaHistory className="middle_history_icon"/>,
   forthBold: "Conversation History Tracking:",
   forthText: " Easily refer back to past conversations for continuous assistance.",
-  firstLink: "https://asistent-45fb86b712b9.herokuapp.com/"
+  firstLink: "https://rafatabian.github.io/AI-assistant"
 }]
 
 //logic for optimisation
@@ -115,7 +115,7 @@ useEffect(() => {
 
           <div className= "third_rotated_title_container"> 
             <p className="rotated_first_word third_rotated_moving_words"><span>Path</span>way Opens</p>  
-            <p className="rotated_second_word third_rotated_moving_words">Pathway O<span>pen</span>s</p>    
+            <p className="rotated_second_word third_rotated_moving_words">Pathway <span>Open</span>s</p>    
             <p className="rotated_third_word third_rotated_moving_words">Path<span>way</span> Opens</p>
           </div>
 
