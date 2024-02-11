@@ -14,6 +14,7 @@ export const ManageGeneral = ({ children }) => {
     const [navShrink, setNavShrink] = useState(null) 
    //when scrolling down logic in projects
    const [allowScroll, setAllowScroll] = useState(null)
+   // auto scroll with choosing a project
 
 
 
@@ -72,7 +73,7 @@ export const ManageGeneral = ({ children }) => {
             setSlideIn, 
             handleButtonClick,
             navShrink,
-            setNavShrink
+            setNavShrink,
             }}>
            {children}
         </generalContext.Provider>

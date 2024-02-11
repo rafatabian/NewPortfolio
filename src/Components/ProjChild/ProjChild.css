@@ -75,8 +75,10 @@
 }
 .music_first_info_p p, .music_second_info_p p,
 .music_third_info_p p, .music_forth_info_p p{
-   width: 100%;
- }
+    width: 100%;
+    font-family: var(--roboto);
+    color:white;
+}
 .music_first_info_p svg,
 .music_second_info_p svg,
 .music_third_info_p svg,
@@ -122,9 +124,9 @@
 }
 .music_first_info_p b, .music_second_info_p b,
 .music_third_info_p b, .music_forth_info_p b{
+  font-size: 15px;
   color: aliceblue;
-  font-size: 15.5px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px !important;
 }
 
 .button_space{

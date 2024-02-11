@@ -87,7 +87,7 @@ const About = () => {
 //handle first set of words
       const handleFirstSet = () => {
         fistSetWords.map((word, index) => {
-          setTimeout(() => {setFirstState(word, index)}, index * 150) 
+          setTimeout(() => {setFirstState(word, index)}, index * 100) 
         })
       }
 
@@ -98,7 +98,7 @@ const About = () => {
  //handle second set of words
       const handleSecondSet = () => {
          secondSetWords.map((word, index) => {
-          setTimeout(() => setSecondState(word, index), index * 150)
+          setTimeout(() => setSecondState(word, index), index * 100)
          })
       }
 
@@ -109,7 +109,7 @@ const About = () => {
 //handle third set of words
       const handleThirdSet = () => {
         thirdSetWords.map((word, index) => {
-         setTimeout(() => setThirdState(word, index), index * 150)
+         setTimeout(() => setThirdState(word, index), index * 100)
         })
      }
 
@@ -120,7 +120,7 @@ const About = () => {
 //handle forth set of words
       const handleForthSet = () => {
         forthSetWords.map((word, index) => {
-         setTimeout(() => setForthState(word, index), index * 150)
+         setTimeout(() => setForthState(word, index), index * 100)
         })
      }
 
@@ -131,7 +131,7 @@ const About = () => {
 //handle fifth set of words
       const handleFifthSet = () => {
         fifthSetWords.map((word, index) => {
-         setTimeout(() => setFifthState(word, index), index * 150)
+         setTimeout(() => setFifthState(word, index), index * 100)
         })
      }
 
@@ -147,42 +147,50 @@ const About = () => {
      
   return (
     <div className="about_container">
-        <div className={`words_first_container firstCont ${next === "first" ? "" : "container_hyde"}`}>
+      {next === "first" ?
+        <div className="words_first_container firstCont">
           <GiVineFlower className=" flower"/> 
             {firstSet.map((obj, index) => <p className="words_first_set" key={obj.value + index}>{obj.value}&nbsp;</p>)}
             <button onClick={() => handleClick("second")} className="next_button next_first_btn">Next</button>
             <span className="span_info firstSpanInfo">1/5</span>
-        </div>
+        </div> 
 
+      : next === "second" ?
 
-            <div className={`words_first_container secondCont ${next === "second" ? "container_bring_to_viewport" : "container_hyde"}`}>
+          <div className="words_first_container secondCont">
             <GiVanillaFlower className=" flower"/> 
         {secondSet.map((obj, index) => <p className="words_first_set" key={obj.value + index}>{obj.value}&nbsp;</p>)}
         <button onClick={() => handleClick("third")} className="next_button next_second_btn">Next</button>
          <span className="span_info secondSpanInfo">2/5</span>
         </div>
-        
 
-        <div className={`words_first_container thirdCont ${next === "third" ? "container_bring_to_viewport" : "container_hyde"}`}>
+        : next === "third" ? 
+
+        <div className="words_first_container thirdCont">
         <GiLotusFlower className=" flower"/> 
         {thirdSet.map((obj, index) => <p className="words_first_set" key={obj.value + index}>{obj.value}&nbsp;</p>)}
         <button onClick={() => handleClick("forth")} className="next_button next_third_btn">Next</button>
         <span className="span_info thirdSpanInfo">3/5</span>
         </div>
 
-        <div className={`words_first_container forthCont ${next === "forth" ? "container_bring_to_viewport" : "container_hyde"}`}>
+        : next === "forth" ? 
+
+        <div className="words_first_container forthCont">
         <GiFlowerTwirl className=" flower"/> 
         {forthSet.map((obj, index) => <p className="words_first_set" key={obj.value + index}>{obj.value}&nbsp;</p>)}
         <button onClick={() => handleClick("fifth")} className="next_button next_forth_btn">Next</button>
         <span className="span_info forthSpanInfo">4/5</span>
         </div>
 
-        <div className={`words_first_container fifthCont ${next === "fifth" ? "container_bring_to_viewport" : "container_hyde"}`}>
+        :
+
+        <div className="words_first_container fifthCont">
         <GiDandelionFlower className=" flower"/> 
         {fifthSet.map((obj, index) => <p className="words_first_set" key={obj.value + index}>{obj.value}&nbsp;</p>)}
         <Link to="/projects" className="next_button next_forth_btn projects_button" onClick={()=> handleProjectsClick()}>Projects</Link>
        <span className="span_info fifthSpanInfo">5/5</span>
         </div> 
+      }
     </div>
   )
 }

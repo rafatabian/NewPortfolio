@@ -110,38 +110,14 @@
     justify-content: space-evenly;
     flex-direction: column;
 }
-
-/* .proj_arrow_down{
-    position: absolute;
-    width: 10%;
-    height: 100%;
-    left:0;
-    bottom: 0;
+.projects_folders_container{
+    width: calc(100vw - 60px - 98px);
+    transform: rotate(90deg);
     display: flex;
     align-items: center;
     justify-content: center;
-} */
-/* @keyframes  {
-    0% {
-        opacity: 0.5;
-    }
-    50%{
-        opacity: 1;
-        scale: 1.4;
-        color:gold;
-    }
-    100%{
-        opacity: 0.5;
-    }
-} */
-/* .proj_arrow_down svg{
- width: 50px;
- height: 50px;
- color: white;
- transform: rotate(90deg);
- animation: arrow_down_proj 2s ease-in-out infinite;
-} */
-
+    flex-direction: column;
+}
 .lorem_ipsum_text{
     position: absolute;
     top: 100px;
@@ -181,10 +157,21 @@
         font-size: 18px;
         line-height: 2;
     }
+    .projects_folders_container{
+        max-width: 1500px 
+    }
+}
+@media screen and (max-width: 950px){
+    .projects_folders_container{
+        padding: 100px;
+    }
 }
 @media screen and (max-width:650px){
     .proj_arrow_down{
      z-index: 99;
+    }
+    .projects_folders_container{
+        padding: 20px
     }
 }
 @media screen and (max-width:450px){
@@ -199,5 +186,8 @@
         top:52px;
         font-size: 14px;
         line-height: 1.2;
+    }
+    .projects_folders_container{
+        padding: 0 0 0 45px
     }
 }

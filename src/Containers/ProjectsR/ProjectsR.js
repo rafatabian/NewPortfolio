@@ -1,5 +1,5 @@
 import "./ProjectsR.css"
-import { useContext, useEffect} from "react"
+import { useContext, useEffect, useRef} from "react"
 import { generalContext } from "../../Contexts/GeneralC"
 import ProjChild from "../../Components/ProjChild/ProjChild"
 import { Link } from "react-router-dom"
@@ -21,8 +21,10 @@ import stars from "../../assets/stars.jpg"
 
 
 const ProjectsR = () => {
-  const { handleButtonClick } = useContext(generalContext)
+  const { handleButtonClick, projNr } = useContext(generalContext)
  
+
+
 //projects info
   const data = [{
     zoomIcon: <SiApplemusic className='music_icon' />,
@@ -92,6 +94,7 @@ useEffect(() => {
   }
 }, [])
 
+
   return (
     <>
       <div className="projects_slide_in">
@@ -103,7 +106,8 @@ useEffect(() => {
           </div>
 
 
-          <ProjChild data={data[1]}/>
+            <ProjChild data={data[1]}/>
+          
 
          <div className= "second_rotated_title_container"> 
             <p className="rotated_first_word second_rotated_moving_words">Up<span>coming</span> Updates</p>   
@@ -111,7 +115,8 @@ useEffect(() => {
             <p className="rotated_third_word second_rotated_moving_words">Upcoming Upd<span>a</span>tes</p>     
           </div>
 
-          <ProjChild data={data[2]}/>
+            <ProjChild data={data[2]} />
+          
 
           <div className= "third_rotated_title_container"> 
             <p className="rotated_first_word third_rotated_moving_words"><span>Path</span>way Opens</p>  
@@ -119,7 +124,8 @@ useEffect(() => {
             <p className="rotated_third_word third_rotated_moving_words">Path<span>way</span> Opens</p>
           </div>
 
-          <ProjChild data={data[0]}/>
+            <ProjChild data={data[0]} />
+          
 
           <div className="contact_buttons_container">
             <Link to="/contact" onClick={()=> handleButtonClick("contact")}>contact</Link>

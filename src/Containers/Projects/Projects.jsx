@@ -2,8 +2,9 @@ import "./Projects.css";
 import Folder from "../../Components/Folder/Folder";
 import { useContext } from "react";
 import { generalContext } from "../../Contexts/GeneralC";
-import ProjectsR from "../../Containers/ProjectsR/ProjectsR";
+import ProjectsR from "../ProjectsR/ProjectsR";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 //images
 import music_app from "../../assets/music_app.png";
 import music_app_tiny from "../../assets/music_app_tiny.png";
@@ -15,8 +16,8 @@ import store_tiny from "../../assets/store_app_tiny.png";
 
 
 const Projects = () => {
-  const { projRotation, allowScroll, setAllowScroll } = useContext(generalContext);
-  const location = useLocation()
+  const { projRotation, allowScroll, setAllowScroll, setProjNr } = useContext(generalContext);
+
 
 // TO DO 
 // finish proj section by adding "store"
@@ -221,9 +222,11 @@ const Projects = () => {
             lorem vitae vulputate. Duis mattis tincidunt eros quis feugiat.
             Integer dignissim euismod consequat.
           </div>
-          <Folder img={store} tiny={store_tiny} title="Selling Platform"/>
-          <Folder img={ai_app} tiny={ai_app_tiny} title="AI Assistant" />
-          <Folder img={music_app} tiny={music_app_tiny} title="Music App" />
+          <div className="projects_folders_container">
+              <Folder img={store} tiny={store_tiny} title="#1Selling Platform" name="firstF" />
+              <Folder img={ai_app} tiny={ai_app_tiny} title="#2AI Assistant"  name="secondF" />
+              <Folder img={music_app} tiny={music_app_tiny} title="#3Music App"  name="thirdF" />
+          </div>
         </div>
 
       </div>
