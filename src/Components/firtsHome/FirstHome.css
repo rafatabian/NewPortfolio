@@ -1,6 +1,8 @@
 .paralaxBackground{
     height: 100vh;
-    margin-top: 100vh;
+    margin-top: 50vh;
+    margin-bottom: 25vh;
+    /* ADD max height */
 }
 .home_name_container {
     width: 40%;

@@ -40,23 +40,23 @@ const Home = () => {
 
 //random moving letters logic
   const getRandomPosition = () => {
-    const posa = Math.floor(Math.random() * `${desktop ? 400 : 200}`);
+    const posa = Math.floor(Math.random() * `${desktop ? 0 : 200}`);
     const posA = Math.floor(Math.random() * `${mobile ? 500 : desktop ? 1400 : 1100}`);
     const sizeA = Math.floor(Math.random() * `${desktop ? 150 : 100}`);
 
-    const posb = Math.floor(Math.random() * `${desktop ? 500 : 300}`);
+    const posb = Math.floor(Math.random() * `${desktop ? 50 : 300}`);
     const posB = Math.floor(Math.random() * `${mobile ? 500 : desktop ? 1600 :1000}`);
     const sizeB = Math.floor(Math.random() * `${desktop ? 600 : 410}`);
 
-    const posc = Math.floor(Math.random() * `${desktop ? 500 : 300}`);
+    const posc = Math.floor(Math.random() * `${desktop ? 0 : 300}`);
     const posC = Math.floor(Math.random() * `${mobile ? 500 : desktop ? 1600 : 1000}`);
     const sizeC = Math.floor(Math.random() * `${desktop ? 420 : 280}`);
 
-    const posd = Math.floor(Math.random() * `${desktop ? 500 : 300}`);
+    const posd = Math.floor(Math.random() * `${desktop ? 100 : 300}`);
     const posD = Math.floor(Math.random() * `${mobile ? 500 : desktop ? 1600 : 1000}`);
     const sizeD = Math.floor(Math.random() * `${desktop ? 550 : 300}`);
 
-    const pose = Math.floor(Math.random() * `${desktop ? 500 : 300}`);
+    const pose = Math.floor(Math.random() * `${desktop ? -100 : 300}`);
     const posE = Math.floor(Math.random() * `${mobile ? 500 : desktop ? 1600 : 1100}`);
     const sizeE = Math.floor(Math.random() * `${desktop ? 1100 : 700}`);
 
@@ -156,11 +156,11 @@ const Home = () => {
 {/* moon transition section */}
       <FirstHome />
 
-{/* skills section */}
-      <SkillsHome />
-
 {/* astronaut transition section */}
       <SecondHome />
+
+{/* skills section */}
+     <SkillsHome />
 
 {/* arrows for navigation */}
       <div

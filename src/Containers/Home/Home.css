@@ -116,7 +116,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-top: 100px;
+    /* margin-top: 100px; */
     padding-right: 6rem;
 }
 .arrowContainerShirnk{
@@ -288,14 +288,7 @@
     top:0;
     left:80px
 }
-.home_a_letter:hover, 
-.home_b_letter:hover, 
-.home_c_letter:hover,
-.home_d_letter:hover, 
-.home_e_letter:hover{
-    scale: 3;
-    margin: 10px;
-}
+
 @keyframes visibleExplosion {
     0% {
         z-index: 1;
