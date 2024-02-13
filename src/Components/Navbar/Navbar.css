@@ -71,7 +71,7 @@
 }
 
 .navShrink {
-    width: calc(100vw - 90px);
+    width: calc(100vw - 110px);
     animation: navbarShrink 0.3s ease !important;
 }
 
@@ -81,11 +81,11 @@
     }
 
     50% {
-        width: calc(100vw - 100px);
+        width: calc(100vw - 120px);
     }
 
     100% {
-        width: calc(100vw - 90px);
+        width: calc(100vw - 110px);
     }
 }
 

@@ -117,10 +117,10 @@
     align-items: center;
     justify-content: flex-end;
     /* margin-top: 100px; */
-    padding-right: 6rem;
+    padding-right: 5.5rem;
 }
 .arrowContainerShirnk{
-    width: calc(100vw - 90px);
+    width: calc(100vw - 110px);
     animation: navbarShrink 0.3s ease;
 }
 .arrowContainerNormal{
@@ -202,7 +202,7 @@
 }
 .home_hyde_window{
     height: 100vh;
-    z-index: 100;
+    z-index: 98;
     width: 100px;
     right: -10px;
     bottom: 0;
@@ -268,7 +268,7 @@
     animation: lettersAnim 0.9s ease;
     transition: 9s ease-out;
     top:0;
-    left:20px
+    left:20px;
 }
 .home_c_letter{
     animation:lettersAnim 1.1s ease;

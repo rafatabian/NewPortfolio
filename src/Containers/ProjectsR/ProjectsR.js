@@ -1,7 +1,6 @@
 import "./ProjectsR.css"
-import { useContext, useEffect, useRef} from "react"
+import { useContext, useEffect, lazy } from "react"
 import { generalContext } from "../../Contexts/GeneralC"
-import ProjChild from "../../Components/ProjChild/ProjChild"
 import { Link } from "react-router-dom"
 //icons
 import { SiApplemusic } from "react-icons/si"
@@ -12,12 +11,13 @@ import { FaBrain, FaHistory } from "react-icons/fa"
 import { MdLocalGroceryStore } from "react-icons/md"
 import { FaFlask } from "react-icons/fa6" //ev change elaborate icon and make it smaller
 import { IoFlask } from "react-icons/io5" // put FaFlask insted of this
-
 //images
 import music_app from "../../assets/music_app.png"
 import store from "../../assets/store_app.png"
 import ai_app from "../../assets/ai_updated.png"
 import stars from "../../assets/stars.jpg"
+//components
+const ProjChild = lazy(() => import("../../Components/ProjChild/ProjChild"))
 
 
 const ProjectsR = () => {

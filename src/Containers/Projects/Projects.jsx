@@ -1,28 +1,21 @@
-import "./Projects.css";
-import Folder from "../../Components/Folder/Folder";
-import { useContext } from "react";
-import { generalContext } from "../../Contexts/GeneralC";
-import ProjectsR from "../ProjectsR/ProjectsR";
-import { useLocation } from "react-router-dom";
-import { Link } from "react-router-dom";
+import "./Projects.css"
+import { useContext, lazy } from "react"
+import { generalContext } from "../../Contexts/GeneralC"
 //images
-import music_app from "../../assets/music_app.png";
-import music_app_tiny from "../../assets/music_app_tiny.png";
-import ai_app from "../../assets/ai_updated.png";
-import ai_app_tiny from "../../assets/ai_updated_tiny.png";
-import store from "../../assets/store_app.png";
-import store_tiny from "../../assets/store_app_tiny.png";
-
+import music_app from "../../assets/music_app.png"
+import music_app_tiny from "../../assets/music_app_tiny.png"
+import ai_app from "../../assets/ai_updated.png"
+import ai_app_tiny from "../../assets/ai_updated_tiny.png"
+import store from "../../assets/store_app.png"
+import store_tiny from "../../assets/store_app_tiny.png"
+// components
+const ProjectsR = lazy(() => import("../ProjectsR/ProjectsR"))
+const Folder = lazy(() => import("../../Components/Folder/Folder"))
 
 
 const Projects = () => {
-  const { projRotation, allowScroll, setAllowScroll, setProjNr } = useContext(generalContext);
+  const { projRotation, allowScroll, setAllowScroll } = useContext(generalContext);
 
-
-// TO DO 
-// finish proj section by adding "store"
-// improve proj section overall
-// improve about section
 
   //logic for scrolling down and activate transitions
   if (allowScroll){

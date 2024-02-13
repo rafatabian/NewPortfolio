@@ -28,7 +28,7 @@ const FirstHome = () => {
             <span></span>
           </Parallax>
 
-          <h1>a junior Front-End Developer</h1>
+          <h1>a front-end developer based in London</h1>
         </Parallax>
       </div>
     </ParallaxBanner>

@@ -10,7 +10,11 @@ const Projects = lazy(() => import("./Containers/Projects/Projects"))
 const Contact = lazy(() => import("./Components/Contact/Contact"))
 
 const App = () => {
-  
+  // TO DO
+  // imporove mobile version
+  // improve roboto text by adding the import in the index.html
+  // make arrows that appear in the bottom page stay in the button directions
+
  return (
   <div className="app_container">
     <ManageGeneral>
@@ -18,12 +22,10 @@ const App = () => {
       <Router>
         <Navbar />
         <Routes>
-          
           <Route path="/" element={<Home />}/>
           <Route path="/about" element={<About />}/>
           <Route path="/projects" element={<Projects />}/>
           <Route path="/contact" element={<Contact />} />
-
         </Routes>
       </Router>
     </Suspense>
